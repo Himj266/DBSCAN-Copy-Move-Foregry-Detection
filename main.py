@@ -38,7 +38,7 @@ if flag:
 	try:
 		value=int(value)
 		if(value<0 or value> 200):
-			print('Value not in range (0,200)........ using default value.')
+			print('Value not in range (0,500)........ using default value.')
 		else:
 			eps= value
 	except ValueError:
@@ -54,7 +54,7 @@ if flag2:
 	try:
 		value=int(value)
 		if(value<0 or value> 20):
-			print('Value not in range (0,20)........ using default value.')
+			print('Value not in range (0,50)........ using default value.')
 		else:
 			min_samples= value
 	except ValueError:
@@ -67,10 +67,6 @@ PrintBoundary()
 detect=Detect(image)
 
 key_points,descriptors = detect.siftDetector()
-
-
-sift_image=detect.showSiftFeatures()
-cv2.imwrite('sift_image.jpg',sift_image)
 
 forgery=detect.locateForgery(eps,min_samples)
 if forgery is None:
