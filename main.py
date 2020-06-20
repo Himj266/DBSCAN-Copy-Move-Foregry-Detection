@@ -37,7 +37,7 @@ except IndexError:
 if flag:
 	try:
 		value=int(value)
-		if(value<0 or value> 200):
+		if(value<0 or value> 500):
 			print('Value not in range (0,500)........ using default value.')
 		else:
 			eps= value
@@ -53,7 +53,7 @@ except IndexError:
 if flag2:
 	try:
 		value=int(value)
-		if(value<0 or value> 20):
+		if(value<0 or value> 50):
 			print('Value not in range (0,50)........ using default value.')
 		else:
 			min_samples= value
